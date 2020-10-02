@@ -56,6 +56,7 @@ public class PCHardwareBuilder implements ActionListener{
 		
 		
 		panel.add(combo);
+		
 		panel.add(new JLabel("Processor: " +findProcessor()));
 		panel.add(new JLabel("GPU: " +findGPU()));
 		panel.add(new JLabel("RAM: " +findRam()));
@@ -109,7 +110,7 @@ public class PCHardwareBuilder implements ActionListener{
 	
 	private static String findRam() {
 		
-		return "GSkill TridentZ";
+		return "Corsair 8GB";
 	}
 
 	private static String findMotherboard() {
@@ -124,11 +125,11 @@ public class PCHardwareBuilder implements ActionListener{
 
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e){
 		
 	}
 
-
+//sQS
 	
 
 }
