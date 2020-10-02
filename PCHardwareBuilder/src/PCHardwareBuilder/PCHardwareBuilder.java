@@ -56,10 +56,10 @@ public class PCHardwareBuilder implements ActionListener{
 		
 		
 		panel.add(combo);
-		panel.add(new JLabel("Processor: "));
-		panel.add(new JLabel("GPU: "));
-		panel.add(new JLabel("RAM: "));
-		panel.add(new JLabel("Motherboard: "));
+		panel.add(new JLabel("Processor: " +findProcessor()));
+		panel.add(new JLabel("GPU: " +findGPU()));
+		panel.add(new JLabel("RAM: " +findRam()));
+		panel.add(new JLabel("Motherboard: " +findMotherboard()));
 		
 		
 		
@@ -69,7 +69,7 @@ public class PCHardwareBuilder implements ActionListener{
 		 
 		
 		new PCHardwareBuilder();
-		System.out.println("Hello, Please Enter Your Budget, It must be a value to the nearest 100th, starting at 500$ and up to $1600, :) ");
+		
 		Scanner sc = new Scanner(System.in);
 		
 		int x = sc.nextInt();
@@ -92,34 +92,34 @@ public class PCHardwareBuilder implements ActionListener{
 		
 		System.out.println(p +" " + g  +" " +r +" " +m);
 		
-		System.out.println("Processor : " +findProcessor(p)); 
-		System.out.println("Processor : " +findRam(g)); 
-		System.out.println("Processor : " +findGPU(r)); 
-		System.out.println("Processor : " +findMotherboard(m)); 
+		System.out.println("Processor : " +findProcessor()); 
+		System.out.println("Processor : " +findRam()); 
+		System.out.println("Processor : " +findGPU()); 
+		System.out.println("Processor : " +findMotherboard()); 
 		
 	}
 	
 
 
-	private static String findProcessor(int a) {
-		System.out.println("$: " +a +" : Ryzen 5 2600");
-		return null;
+	private static String findProcessor() {
+		
+		return "Ryzen 5";
 	}
 
 	
-	private static String findRam(int b) {
-		System.out.println("$: " +b +" : G Skill TridentZ");
-		return null;
+	private static String findRam() {
+		
+		return "GSkill TridentZ";
 	}
 
-	private static String findMotherboard(int c) {
-		System.out.println("$: " +c +" : Asus B450");
-		return null;
+	private static String findMotherboard() {
+		
+		return "Asus B450";
 	}
 
-	private static String findGPU(int d){
-		System.out.println("$: " +d +" : GTX 1060");
-		return null;
+	private static String findGPU(){
+		
+		return "GTX 1060";
 	}
 
 
